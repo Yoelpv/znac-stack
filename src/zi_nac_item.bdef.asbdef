@@ -1,0 +1,23 @@
+managed implementation in class zbp_i_nac_item unique;
+strict ( 2 );
+
+define behavior for ZI_NAC_ITEM alias Item
+  persistent table znac_item
+  lock master
+  authorization master ( global )
+{
+  field ( readonly ) ItemUuid;
+  create;
+  update;
+  delete;
+
+  mapping for znac_item
+  {
+    ItemUuid      = item_uuid;
+    ItemDesc      = item_desc;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition - Items NAC'
+define service ZUI_NAC_ITEM {
+  expose ZC_NAC_ITEM as Item;
+}

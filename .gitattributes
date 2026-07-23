@@ -1,0 +1,4 @@
+# Preserva los finales de línea exactos que usa abapGit.
+# XML → LF+BOM   |   fuentes CDS/SRVD → CRLF   |   fuentes ABAP → LF
+# Sin esto, core.autocrlf=true en Windows convierte todo a CRLF en el blob.
+* -text
